@@ -1,0 +1,120 @@
+{% extends 'layout.html' %} {% block body %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("../static/images/farm_background_1.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-result{
+    display: inline-block;
+    color: whitesmoke;
+    background-color:#000033;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width:180px;
+	font-weight: bold;
+}
+
+table{
+    margin-top: 2em;
+}
+
+.container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#current{
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    /* color:black */
+}
+
+.forecast{
+    /*width:90%; */
+    margin: 2em auto;
+    padding-left:1em;
+    padding-top: 1em;
+}
+
+
+
+.svg{
+    width:70px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg">
+	<br>
+	
+	<h2 style="text-align: center; margin: 0px; color: white">
+		<b>WEATHER INFORMATION OF {{ city }}</b>
+		<p style="text-align: center; margin: 0px; color: white"><img src="{{ weather['icon'] }}" class="svg"> {{ weather['temp'] }}</p>
+	</h2>
+	<div class="container">
+    <div id='current'>	
+	<table class="table table-responsive">
+      <tbody>
+          <tr>
+            <td> <span class="btn-result">Min/Max : {{ weather['min_temp'] }} / {{ weather['max_temp'] }}</span></td> 
+          </tr>
+          <tr>
+            <td> <span class="btn-result">Feels like : {{ weather['feels_like'] }}</span></td> 
+          </tr>
+          <tr>
+            <td> <span class="btn-result">Cloudiness : {{ weather['cloudiness'] }}</span></td> 
+          </tr>
+          <tr>
+            <td> <span class="btn-result">Humidity : {{ weather['humidity'] }}</span></td> 
+          </tr>
+          <tr>
+            <td> <span class="btn-result">Sunrise : {{ weather['sunrise'] }}</span></td> 
+          </tr>
+          <tr>
+            <td> <span class="btn-result">Sunset : {{ weather['sunset'] }}</span></td> 
+          </tr>
+          <tr>
+            <td> <span class="btn-result">Wind : {{ weather['speed'] }}</span></td> 
+          </tr>
+      </tbody>
+    </table>
+	</div>
+	
+	<div class="d-flex flex-wrap justify-content-center align-content-center row forecast">
+		{% for day in forecast %}        
+        <div class="mr-3 border border-info p-2 mb-3" ">
+          <p> <img src="{{ day['icon'] }}" class="svg"> </p>
+          <p style="font-weight: bold;color: yellow"> {{ day['dt'] }}</p>
+          <p style="font-weight: bold;color: yellow"> {{ day['temp'] }}</p>
+        </div>
+      {% endfor %}
+	</div>
+	
+    </div>
+
+</div>
+
+
+</body>
+
+{% endblock %}
