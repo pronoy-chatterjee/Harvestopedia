@@ -2,6 +2,6 @@ numpy
 pandas
 Flask
 requests
-tensorflow
+tensorflow-cpu
 Pillow
 gunicorn == 20.0.4
