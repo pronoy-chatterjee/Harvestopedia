@@ -12,7 +12,7 @@ This application has basically 4 parts as follows –
 3.	Crop Disease Detection - This part of the application needs a leaf image as an input and then detects the type of disease if any the crop is having. It will also provide a little background on the disease and provide some remedies.
 4.	Weather Information – This part of the application is a simple API based weather forecasting information display for the farmer’s convenience.
 
-##Future Scope –
+## Future Scope –
 
 1.	In future we are planning to build a mobile application on this concept.
 2.	This application in future can be integrated with sensors to detect the soil conditions like N-P-K levels, pH levels of the soil which will make this an Internet of Things use case.
