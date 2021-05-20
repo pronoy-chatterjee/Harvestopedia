@@ -18,6 +18,7 @@ This application has basically 4 parts as follows –
 2.	This application in future can be integrated with sensors to detect the soil conditions like N-P-K levels, pH levels of the soil which will make this an Internet of Things use case.
 3.	Multiple regional language support like Hindi can be enabled to customize the user’s experience.
 4.	In future, we are planning to integrate push notifications via SMS for the farmers if any heavy rainfall or thunderstorm predictions are there.
+5.	In future, we can have the functionality in which the application will tell us about the severity of the disease.
 
 ## Built with - 
 
