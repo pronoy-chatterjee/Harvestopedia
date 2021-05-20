@@ -5,3 +5,4 @@ requests
 tensorflow-cpu
 Pillow
 gunicorn == 20.0.4
+scikit-learn
